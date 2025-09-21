@@ -2,19 +2,12 @@
 const start = document.getElementById("start");
 const stop = document.getElementById("stop");
 const reset = document.getElementById("reset");
+const timer = document.getElementById("timer");
 
 // 25 minutes
 let timeLeft = 1500;
 let interval; 
 
-// let minutes = 25;
-// let seconds = 0;
-// let isPaused = false;
-// let enteredTime=null;
-
-// function startTimer() {
-//     timer = setInterval(updateTimer, 1000);
-// }
 
 
 
@@ -22,13 +15,15 @@ function startTimer() {
     // The updatetimer function will be executed every 1 second
     // setInterval keeps calling the count down function until clearinterval is called , 
     // then timer is updated to 25 mins again.  
+   
+   if (interval) return;
     interval = setInterval(() =>  {
             timeLeft--;
             updateTimer();
             if(timeLeft === 0){
                 clearInterval(interval);
-                alert("Time's Up!");
-                timeLeft = 1500;
+                alert("Time to take a break: Stretch, drink water and start another session!");
+                timeLeft = 5;
                 updateTimer();
             }
         }, 1000);
@@ -42,13 +37,15 @@ const updateTimer = () => {
 
 // formatting minutes and seconds.. Makes strings at least 2 characters 
     timer.innerHTML = `${minutes.toString().padStart(2,"0")}
-    ${seconds.toString().padStart(2,"0")}`;
+    : ${seconds.toString().padStart(2,"0")}`;
 
 }
 
 
 function stopTimer() {
     clearInterval(interval);
+    interval= null;
+    
 }
         
 
@@ -73,17 +70,6 @@ reset.addEventListener("click", resetTimer);
 
 
 
-    // if (minutes === 0 && seconds === 0) {
-    //     clearInterval(timer);
-    //     alert('Time is up! Take a break.');
-    // } else if (!isPaused) {
-    //     if (seconds > 0) {
-    //         seconds--;
-    //     } else {
-    //         seconds = 59;
-    //         minutes--;
-    //     }
-    // }
 
 
 
@@ -93,16 +79,8 @@ reset.addEventListener("click", resetTimer);
 
 
 
-// function togglePauseResume() {
-//     const pauseResumeButton =
-//         document.querySelector('pause-resume-button');
-//     isPaused = !isPaused;
 
-//     if (isPaused) {
-//         pauseResumeButton.textContent = 'Resume';
-//     } else {
-//         pauseResumeButton.textContent = 'Pause';
-//     } }
+
 
 
 

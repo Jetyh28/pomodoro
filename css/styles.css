@@ -1,7 +1,7 @@
          
 
 html, body{ 
-    background: rgb(179, 158, 154);
+    background: rgb(218, 223, 202);
  
     background-attachment: cover;
     background-size: cover;  
@@ -16,7 +16,7 @@ html, body{
 .app-logo {
     display:flex;
     flex-direction: row;
-    gap: px;
+
 }
 
 
@@ -44,21 +44,24 @@ header h1 {
     flex-wrap: wrap;
    
     align-items: center;
-    height: 1024px;
+    height: 900px;
   
-    max-width: 1600px;
-    max-height: 1024;
+  
+    max-width: 1000px;
+      
+    
     margin:0 auto;
     background-color: rgb(241, 241, 238);
     border: 1px solid rgb(230, 228, 224);
     border-radius: 2em;
      font-family: "arial";
+     overflow-y: auto;
     
 }
 
 .main-div h1 {
     margin: 2% 0 2% 0;
-    font-size: 4em ;
+    font-size: 4rem;
     color: rgb(49, 17, 9);
    font-family: "arial";
 }
@@ -88,7 +91,7 @@ header h1 {
     height: 220px;
     max-height: 300px;
     text-align: center;
-    font-size: 5em;
+    font-size: 5rem;
     color: rgb(107, 39, 39);
     font-weight: 750;
     background-color: rgba(92, 84, 84, 0.2);
@@ -122,7 +125,7 @@ header h1 {
   font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
   font-size: 16px;
   font-weight: 800;
-  line-height: 16px;
+  line-height: 1.1rem;
   min-height: 40px;
   outline: 0;
   padding: 12px 14px;
@@ -191,9 +194,9 @@ header h1 {
 
 
 .timer-content h2 {
-    font-size: 100px;
+    font-size: 2rem;
     margin: 8% 0 0 0;
-    color: rgb(75, 44, 19);
+    color: rgb(63, 36, 14);
 }
 
 
@@ -201,8 +204,10 @@ header h1 {
 
 .list-section{
     /* border: 1px solid rgb(26, 26, 17); */
-    width: 600px;
-    height: 300px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    max-height: 500px;
     gap: 15px;
     margin: 20px 0 0 0;
     
@@ -210,8 +215,9 @@ header h1 {
     box-shadow: 0 0 8px #ecdad7;
     text-align: center;
     background-color: rgba(185, 185, 180, 0.3);
-     overflow: hidden;
-    max-height: 600px;
+     overflow-y: auto;
+    
+    
     
 }
 
@@ -225,8 +231,9 @@ header h1 {
 .input-section {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    
+    width: 80%;
+    margin: auto;
    
     /* border: 1px solid blue; */
 
@@ -278,6 +285,7 @@ header h1 {
     text-align: center;
     height: 100%;
     overflow: hidden;
+    padding-left: 20px;
 }
 
  #task-list li {
@@ -291,6 +299,7 @@ header h1 {
     color: brown;
     background-color: rgba(185, 182, 182, 0.3);
     box-shadow: 0 0 8px #d6d6d6;
+    width: 85%;
     
 }
 
@@ -311,20 +320,150 @@ header h1 {
     color: rgba(68, 25, 25, 0.2);
 }
 
-/* 
 
-.each-product:hover {
-    box-shadow: 0 0 12px #cacac8;
-   
+
+/* Media queries */
+
+@media screen and (max-width: 800px) {
+    html, body {
+        background-color: rgb(207, 200, 200);
+    }
+  .main-div {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    /* max-height: 600px; */
+    background-color: #f5f5ea;
+  }
+
+  .main-div h1 {
+    font-size: 2rem;
+  }
+
+  .timer-section, .timer-content, .list-section {
+    width: 90%;
+    height: auto;
+  }
+
+  .tasks-container {
+    padding-left: 35px;
+  }
+  #task-list li {
+    width:90%;
+  }
+
+
+
 }
 
-.each-product .button-container {
-    margin-top: 15%;
-    margin-left: 50%;
+
+
+@media screen and (max-width: 600px) {
+    body,html {
+        background-color: #e4e2e2;
+    }
+  .main-div {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    background-color: #a5b368;
+  }
+
+  .main-div h1 {
+    font-size: 1.1em;
+    color: white;
+  }
+
+  .timer-section, .timer-content, .input-section  {
+    width: 90%;
+    height: auto;
+  }
+
+  #timer  {
+    color: white;
+  }
+
+  .buttons-div {
+    width:100%;
+    gap: 8px;
+  }
+
+  .buttons-div button {
+    width: 30%;
+    padding-right: 10px;
+    
+    font-size: 1em;
+  }
+
+.list-section {
+    width: 80%;
 }
 
+  .list-section h2 {
+    color: white;
+  }
 
-.each-product .button-container:hover {
-       box-shadow: 0 0 12px #cacac8;} */
+  #task-list li {
+    color: white;
+    width: 80%;
+  }
 
 
+
+
+
+
+
+@media screen and (max-width: 400px) {
+    body,html {
+        background-color: #e4e2e2;
+    }
+  .main-div {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    background-color: #6578cc;
+  }
+
+  .main-div h1 {
+    font-size: 1.1em;
+    color: white;
+  }
+
+  .timer-section, .timer-content, .input-section  {
+    width: 90%;
+    height: auto;
+  }
+
+  #timer  {
+    color: white;
+  }
+
+  .buttons-div {
+    width:100%;
+    gap: 8px;
+  }
+
+  .buttons-div button {
+    width: 30%;
+    padding-right: 10px;
+    
+    font-size: 1em;
+  }
+
+.list-section {
+    width: 80%;
+}
+
+  .list-section h2 {
+    color: white;
+  }
+
+  #task-list li {
+    color: white;
+    width: 80%;
+  }
+
+
+
+}}
