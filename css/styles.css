@@ -1,0 +1,330 @@
+         
+
+html, body{ 
+    background: rgb(179, 158, 154);
+ 
+    background-attachment: cover;
+    background-size: cover;  
+    height: 100%;
+    
+      
+
+}
+
+
+
+.app-logo {
+    display:flex;
+    flex-direction: row;
+    gap: px;
+}
+
+
+
+
+
+
+
+.logo {
+    height: 50px;
+    width: 35px;
+}
+
+header h1 {
+     font-family: "arial";
+     color: rgb(49, 17, 9);
+}
+
+
+/* Main div */
+
+.main-div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+   
+    align-items: center;
+    height: 1024px;
+  
+    max-width: 1600px;
+    max-height: 1024;
+    margin:0 auto;
+    background-color: rgb(241, 241, 238);
+    border: 1px solid rgb(230, 228, 224);
+    border-radius: 2em;
+     font-family: "arial";
+    
+}
+
+.main-div h1 {
+    margin: 2% 0 2% 0;
+    font-size: 4em ;
+    color: rgb(49, 17, 9);
+   font-family: "arial";
+}
+
+
+
+/* Timer section (box containing timer content)*/
+.timer-section {
+    width: 600px;
+    height: 300px;
+    max-width: 800px;
+    max-height: 1200px;
+    /* border: solid 1px yellow; */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 1%;
+}
+
+/* Timer container */
+.timer-content {
+    /* border: solid 1px rgb(226, 217, 200); */
+    flex: 1;
+    border-radius: 2%;
+    box-shadow: 0 0 12px #aaaaa9;
+    width: 600px;
+    height: 220px;
+    max-height: 300px;
+    text-align: center;
+    font-size: 5em;
+    color: rgb(107, 39, 39);
+    font-weight: 750;
+    background-color: rgba(92, 84, 84, 0.2);
+    
+}
+
+
+
+
+
+
+.buttons-div {
+    /* border: 1px solid rgb(224, 228, 224); */
+    display: flex;
+    gap: 1em;
+    border-radius: 1%;
+    /* background-color: #e7c096; */
+    margin: 10px;
+    
+}
+
+.timer-buttons {
+    align-items: center;
+ 
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  font-size: 1.5em;
+}
+
+
+
+.timer-buttons:active {
+  opacity: .5;
+}
+
+#start {
+     background: rgb(113, 177, 113);
+  border: 1px solid rgb(113, 177, 113);
+}
+
+#start:hover, #start:active{
+     background-color: initial;
+  background-position: 0 0;
+  color: rgb(113, 177, 113);
+
+}
+
+#stop {
+     background: #bd6c69;
+  border: 1px solid #bd6c69;
+}
+
+
+#stop:hover, #stop:active{
+     background-color: initial;
+  background-position: 0 0;
+  color: #bd6c69;
+
+}
+
+
+
+#reset {
+     background: #606a9b;
+  border: 1px solid #606a9b;
+  
+}
+
+
+#reset:hover, #reset:active{
+     background-color: initial;
+  background-position: 0 0;
+  color: #6b83ee;
+
+}
+
+
+
+
+
+
+
+
+.timer-content h2 {
+    font-size: 100px;
+    margin: 8% 0 0 0;
+    color: rgb(75, 44, 19);
+}
+
+
+
+
+.list-section{
+    /* border: 1px solid rgb(26, 26, 17); */
+    width: 600px;
+    height: 300px;
+    gap: 15px;
+    margin: 20px 0 0 0;
+    
+    border-radius: 2em;
+    box-shadow: 0 0 8px #ecdad7;
+    text-align: center;
+    background-color: rgba(185, 185, 180, 0.3);
+     overflow: hidden;
+    max-height: 600px;
+    
+}
+
+
+.list-section h2 {
+    color: rgb(102, 22, 22);
+    
+}
+
+
+.input-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+   
+    /* border: 1px solid blue; */
+
+}
+
+.input-section input {
+    flex:1;
+    font-size: 1rem;
+    padding: 10px 17px;
+    border: none;
+    outline: none;
+    border-radius: 22px;
+    background-color: rgba(221, 195, 195, 0.3);
+
+}
+
+
+.input-section input::placeholder {
+    color:rgb(90, 87, 87);
+}
+
+
+.input-section button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: rgb(177, 161, 161);
+    border: 2px solid rgb(192, 182, 182);
+    cursor: pointer;
+    
+}
+
+
+.delete-btn i {
+    pointer-events: none;
+
+}
+
+.input-section button:hover{
+    transform: scale(1.1);
+    background: rgb(66, 28, 28);
+}
+
+
+
+.tasks-container {
+    /* border: 1px solid red; */
+    text-align: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+ #task-list li {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    list-style-type:  none;
+    text-align: left;
+    font-size: 1.1em;
+    color: brown;
+    background-color: rgba(185, 182, 182, 0.3);
+    box-shadow: 0 0 8px #d6d6d6;
+    
+}
+
+#task-list li .checkbox {
+    height: 20px;
+    /* appearance: none; */
+    border: 2px solid rgb(163, 144, 144);
+
+    min-width: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.checkbox:checked + span {
+    text-decoration: line-through;
+    color: rgba(68, 25, 25, 0.2);
+}
+
+/* 
+
+.each-product:hover {
+    box-shadow: 0 0 12px #cacac8;
+   
+}
+
+.each-product .button-container {
+    margin-top: 15%;
+    margin-left: 50%;
+}
+
+
+.each-product .button-container:hover {
+       box-shadow: 0 0 12px #cacac8;} */
+
+
